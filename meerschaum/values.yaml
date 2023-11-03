@@ -61,6 +61,12 @@ service:
   port: 8000
   targetPort: 8000
 
+podSecurityContext:
+  enabled: true
+  fsGroup: 1001
+  runAsGroup: 1001
+  runAsUser: 1001
+
 ## Configure extra options for liveness and readiness probes
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes)
 ##
